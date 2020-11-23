@@ -4,7 +4,7 @@ class User_model extends CI_Model
 {
   public function gets()
 	{
-		return $this->db->query("SELECT * FROM User")->result();
+		//return $this->db->query("SELECT * FROM User")->result();
 	}
   function add($option)
    {

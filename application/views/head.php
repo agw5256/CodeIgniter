@@ -13,6 +13,13 @@
                 <link href="/static/lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
             </head>
             <body>
+                <?php
+                  if ($this->session->flashdata('message')) {
+	               ?>
+	                <script> alert('<?=$this->session->flashdata('message')?>') </script>
+	                 <?php
+                 }
+                 ?>
                 <div class="navbar navbar-fixed-top">
                   <div class="navbar-inner">
                     <div class="container-fluid">

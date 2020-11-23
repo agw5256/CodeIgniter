@@ -13,8 +13,8 @@ class Auth extends CI_Controller
 	}
   function get(){
         $this->load->view('head');
-        $topic = $this->User_model->gets();
-        $this->load->view('get', array('topic'=>$topic));
+        //$topic = $this->User_model->gets();
+        //$this->load->view('get', array('topic'=>$topic));
         $this->load->view('footer');
   }
   function login(){
@@ -75,6 +75,8 @@ class Auth extends CI_Controller
             password_verify($this->input->post('password'), $user->password)
     	) {
     		$this->session->set_userdata('is_login', true);
+				$this->session->set_userdata('user_id', $user->ID);
+				$this->session->set_flashdata('message', '로그인 성공.');
     		$this->load->helper('url');
     		redirect("/Auth/login");
     	} else {
