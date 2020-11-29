@@ -78,7 +78,7 @@ class Auth extends CI_Controller
 				$this->session->set_userdata('user_id', $user->ID);
 				$this->session->set_flashdata('message', '로그인 성공.');
     		$this->load->helper('url');
-    		redirect("/Auth/login");
+    		redirect("/Board/boardlist");
     	} else {
     		echo "불일치";
     		$this->session->set_flashdata('message', '로그인에 실패 했습니다.');
