@@ -6,4 +6,6 @@ foreach($data as $entry){
 <?php
 }
 ?>
+
+<button type="button" class="navyBtn" onClick="location.href='registerboard'">
 </ul>
