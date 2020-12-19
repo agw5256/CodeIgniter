@@ -13,7 +13,13 @@ class Board extends CI_Controller
 	}
   function boardlist(){
      	$this->load->view('head');
-      $data = $this->Board_model->gets();
+			$this->load->library('form_validation');
+			if($this->input->get('search') == NULL){
+          	$data = $this->Board_model->gets(NULL);
+      }
+			else{
+				$data = $this->Board_model->gets($this->input->get('search'));
+			}
       $this->load->view('board_list', array('data'=>$data));
       $this->load->view('footer');
   }

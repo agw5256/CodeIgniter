@@ -2,9 +2,9 @@
 
 class Board_model extends CI_Model
 {
-  public function gets()
+  public function gets($data)
 	{
-		return $this->db->query("SELECT * FROM Board")->result();
+		return $this->db->query("SELECT * FROM Board WHERE boardContent like '%$data%'")->result();
 	}
   public function get($id)
 	{
