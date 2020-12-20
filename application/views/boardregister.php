@@ -6,7 +6,7 @@
       <div class="control-group">
         <label class="control-label" for="boardContent">게시글</label>
         <div class="controls">
-          <input type="text" id="boardContent" name="boardContent" value="<?php echo set_value('boardContent'); ?>"  placeholder="게시글">
+            <textarea class="form-control" rows="3" input type="text" row="5" id="boardContent" name="boardContent" value="<?php echo set_value('boardContent'); ?>"  placeholder="게시글"></textarea>
         </div>
       </div>
       <div class="control-group">

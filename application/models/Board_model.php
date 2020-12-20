@@ -8,7 +8,7 @@ class Board_model extends CI_Model
 	}
   public function get($id)
 	{
-    return $this->db->query("SELECT * FROM Board WHERE $id")->row();
+    return $this->db->query("SELECT * FROM Board WHERE ID = $id")->row();
 	}
   function addBoard($option)
    {
